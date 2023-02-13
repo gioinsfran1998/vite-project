@@ -1,10 +1,14 @@
-import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const Game = () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { session }: any = useLoaderData();
-  return <div>Game{session}</div>;
+  const { sessionId, currency }: any = useLoaderData();
+  return (
+    <div>
+      Game
+      {currency}
+      {sessionId}
+    </div>
+  );
 };
 
 export default Game;
